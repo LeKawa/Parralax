@@ -1,0 +1,41 @@
+*{font-family: 'Nunito', sans-serif;
+}
+
+body{
+  background-color: #ECEAD0;
+  padding: 12px 12px 12px 12px;
+}
+.about_container{
+  height: 500px;
+  display: flex;
+    background-color: #ecedef;
+}
+.part_left{
+  width:50%;
+}
+.description_container{
+  position: absolute;
+  width: 100px;
+  background-color: #BECDE7;
+  height: 100px;
+  box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.05);
+  margin-top: 30%;
+  left: 500px;
+}
+.image_description{
+  height: 500px;
+  width: auto;
+}
+.artistes_container{
+  display: block;
+  height: 100px;
+  width: 30%;
+  margin-left: 10%;
+}
+.artistes_title{
+  text-align: center;
+}
+.description{
+  height: 500px;
+  background-color: #ecedef;
+}
