@@ -2,68 +2,57 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <title>parralax</title>
+  <title>parralax</title>
 </head>
 
 <body>
-    <section class="container">
-        <section class="about_container">
+  <section class="container">
+    <div id="capture">
+      <div class="bubble1" id="bubble1"></div>
+      <div class="bubble2" id="bubble2"></div>
+      <div class="bubble3" id="bubble3"></div>
+    </div>
 
-            <div class="part_left">
-                <img src="img/rightpicture.jpg" alt="" class="image_description">
-                <div></div>
-            </div>
-            <div class="description_container" id="salut">
-                <p>salut</p>
-
-            </div>
-            <div class="artistes_container">
-                <h1 class="artistes_title">ARTISTES</h1>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
-                <p>
-                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-
-        </section>
-        <section class="description">
-            <div>
-
-            </div>
-
-        </section>
-
-    </section>
+  </section>
 
 </body>
+<script src="html2canvas.js"></script>
 <script>
-    window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function(f) {
-        setTimeout(f, 800 / 60)
-    }
+  window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function(f) {
+    setTimeout(f, 800 / 60)
+  }
 
 
-    var salut = document.getElementById('salut')
-    var rand1 = 20;
+  var bubble1 = document.getElementById('bubble1')
+  var bubble2 = document.getElementById('bubble2')
+  var bubble3 = document.getElementById('bubble3')
+  var rand1 = 20;
+  var rand2 = 50;
+  var rand3 = 15;
 
-    function parallaxbubbles() {
+  function parallaxbubbles() {
 
-        var scrolltop = window.pageYOffset
-        salut.style.top = -scrolltop * rand1 / 100 + 'px'
-    }
+    var scrolltop = window.pageYOffset
+    bubble1.style.top = -scrolltop * rand1 / 100 + 'px'
+    bubble2.style.top = -scrolltop * rand2 / 100 + 'px'
+    bubble3.style.top = -scrolltop * rand3 / 100 + 'px'
+  }
 
-    window.addEventListener('scroll', function() {
-        requestAnimationFrame(parallaxbubbles)
-    }, false);
-
-
+  window.addEventListener('scroll', function() {
+    requestAnimationFrame(parallaxbubbles)
+  }, false);
 </script>
-
+<script>
+  html2canvas(document.querySelector("#capture")).then(canvas => {
+    document.body.appendChild(canvas)
+  });
+</script>
 
 </html>

@@ -1,41 +1,44 @@
-*{font-family: 'Nunito', sans-serif;
+body {
+  background-color: #FFD221;
 }
 
-body{
-  background-color: #ECEAD0;
-  padding: 12px 12px 12px 12px;
+.container {
+  height: 300vh;
+  width: 100%;
 }
-.about_container{
-  height: 500px;
-  display: flex;
-    background-color: #ecedef;
-}
-.part_left{
-  width:50%;
-}
-.description_container{
+
+.bubble1 {
   position: absolute;
-  width: 100px;
-  background-color: #BECDE7;
-  height: 100px;
-  box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.05);
-  margin-top: 30%;
+  z-index: -1;
+  width: 50px;
+  border-radius: 100%;
+  border: 7px solid #003049;
+  height: 50px;
+  margin-top: 100%;
+  opacity: 0.05;
   left: 500px;
 }
-.image_description{
-  height: 500px;
-  width: auto;
-}
-.artistes_container{
-  display: block;
+
+.bubble2 {
+  opacity: 0.05;
+  position: absolute;
+  width: 100px;
+  z-index: -1;
+  border-radius: 100%;
+  border: 7px solid #003049;
   height: 100px;
-  width: 30%;
-  margin-left: 10%;
+  margin-top: 30%;
+  left: 800px;
 }
-.artistes_title{
-  text-align: center;
-}
-.description{
-  height: 500px;
-  background-color: #ecedef;
+
+.bubble3 {
+  z-index: -1;
+  position: absolute;
+  width: 100px;
+  opacity: 0.05;
+  border-radius: 100%;
+  border: 7px solid #003049;
+  height: 100px;
+  margin-top: 50%;
+  left: 200px;
 }
